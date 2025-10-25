@@ -30,29 +30,28 @@
             <li><a href="#" onclick="showAbout()">About</a></li>
             <li><a href="resume/Sameeksha-Mahesh-Resume-AIML.pdf" target="_blank">Resume</a></li>
             <li><a href="#" onclick="showProjects()">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#" onclick="showContact()">Contact</a></li>
         </ul>
         </nav>
     </header>
-         <div class="container">
-            <div class="hero-pic">
-                <img src="image/profile.jpeg" alt="Profile pic">
-            </div>
-            <div class="hero-text">
-                <h5>Hi I'm <span class="input">Backend Developer</span></h5>
-                <h1>Sameeksha Mahesh</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde praesentium aliquid voluptatum quae sunt accusantium excepturi, esse quasi facilis corporis qui cum assumenda sint quibusdam possimus aut eum magnam fugiat.</p>
-                <div class="btn-group">
-                    <a href="#" class = "btn active">Download CV</a>
-                </div>
-                <div class="social">
-                    <a href="https://www.linkedin.com/in/sameeksham09/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/sameeksham09"><i class="fa-brands fa-github"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
+         <div class="hero-content">
+  <div class="hero-left">
+    <h1 class="intro">Hi, I’m <span>Sameeksha Mahesh</span></h1>
+    <h3 class="role">Backend Developer | MERN Stack Developer</h3>
+    <p class="intro-text">
+      Passionate about building scalable, secure, and user-focused applications.  
+      Always exploring new technologies and improving my craft.
+    </p>
+    <div class="btn-group">
+      <a href="resume/Sameeksha-Mahesh-Resume-AIML.pdf" target="_blank" class="btn active">Download CV</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <img src="image/profile.jpeg" alt="Profile" class="profile-pic">
+  </div>
+</div>
+
     </div>
     </div>
     </div>
@@ -181,6 +180,68 @@ function showAbout() {
     document.getElementById("projects-section").style.display = "none";
     document.getElementById("about-section").style.display = "block";
     window.scrollTo(0, 0);
+}
+</script>
+
+<!-- Contact Section -->
+<div id="contact-section" style="display:none;">
+  <section class="contact">
+    <!-- Back to Home button (top-right) -->
+    <button class="btn back-home" onclick="showHome()">Back to Home</button>
+
+    <div class="contact-container">
+      <h2>Contact</h2>
+      <p class="contact-sub">Interested in collaboration or internships? Send a short message — I’ll get back soon.</p>
+
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <div class="form-actions">
+            <button type="submit" class="btn">Send</button>
+            <a class="btn btn-ghost" href="mailto:sameeksham091102@gmail.com">Email me</a>
+          </div>
+        </form>
+
+        <!-- Small Info / Socials -->
+        <div class="contact-info">
+          <h3>Quick links</h3>
+          <p><strong>Email:</strong> <a href="mailto:sameeksham091102@gmail.com">sameeksham091102@gmail.com</a></p>
+          <p><strong>Location:</strong> Davis, CA</p>
+
+          <h4>Profiles</h4>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/sameeksham09/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/sameeksham09" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i> GitHub</a>
+          </div>
+
+          <p class="availability">Open to Graduate Engineering Intern roles & remote collaboration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+function showContact() {
+  // hide other sections
+  document.getElementById("home-section").style.display = "none";
+  const sections = ["projects-section","about-section","contact-section"];
+  sections.forEach(id => {
+    if (id !== "contact-section" && document.getElementById(id))
+      document.getElementById(id).style.display = "none";
+  });
+  // show contact
+  document.getElementById("contact-section").style.display = "block";
+  window.scrollTo(0,0);
 }
 </script>
 
