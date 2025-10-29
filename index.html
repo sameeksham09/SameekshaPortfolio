@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
-
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 </head>
 <body>
@@ -16,9 +16,10 @@
     <div class="wrapper">
     <header>
         <div class="logo">
-            <i class="fa-solid fa-a"></i>
-            <div class="logo-text">Sameeksha Mahesh</div>
-        </div>
+    <div class="logo-circle">S</div>
+    <div class="logo-text">Sameeksha Mahesh</div>
+</div>
+
         <nav>
             <div class="togglebtn">
                 <span></span>
@@ -28,7 +29,7 @@
         <ul class = "navlinks">
             <li><a href="#">Home</a></li>
             <li><a href="#" onclick="showAbout()">About</a></li>
-            <li><a href="resume/Sameeksha-Mahesh-Resume-AIML.pdf" target="_blank">Resume</a></li>
+            <li><a href="#" onclick="showExperience()">Experience</a></li> <!-- updated -->
             <li><a href="#" onclick="showProjects()">Projects</a></li>
             <li><a href="#" onclick="showContact()">Contact</a></li>
         </ul>
@@ -37,7 +38,9 @@
          <div class="hero-content">
   <div class="hero-left">
     <h1 class="intro">Hi, I’m <span>Sameeksha Mahesh</span></h1>
-    <h3 class="role">Backend Developer | MERN Stack Developer</h3>
+    <h3 class="role">
+    <span class="typed-roles"></span>
+</h3>
     <p class="intro-text">
       Passionate about building scalable, secure, and user-focused applications.  
       Always exploring new technologies and improving my craft.
@@ -48,7 +51,7 @@
   </div>
 
   <div class="hero-right">
-    <img src="image/profile.jpeg" alt="Profile" class="profile-pic">
+    <img src="image/undraw_remote-worker_0l91.png" alt="Profile" class="profile-pic">
   </div>
 </div>
 
@@ -245,6 +248,57 @@ function showContact() {
 }
 </script>
 
+<!-- Experience Section -->
+<div id="experience-section" style="display:none;">
+    <section class="experience">
+        <h2>Experience</h2>
+        <div class="experience-cards">
+            <div class="experience-card">
+                <h3>Software Developer | Perfios Software Solutions</h3>
+                <p>Worked on backend development using Java, Spring Boot, and SQL.</p>
+                <ul>
+                    <li>Implemented REST APIs for financial applications</li>
+                    <li>Optimized database queries for large datasets</li>
+                    <li>Collaborated in agile teams and code reviews</li>
+                </ul>
+            </div>
+        </div>
+        <button class="back-home" onclick="showHome()">Back to Home</button>
+    </section>
+</div>
+
+<!-- Add JS for Experience -->
+<script>
+function showExperience() {
+    hideAllSections();
+    document.getElementById("experience-section").style.display = "block";
+    window.scrollTo(0,0);
+}
+
+function hideAllSections() {
+    document.getElementById("home-section").style.display = "none";
+    document.getElementById("projects-section").style.display = "none";
+    document.getElementById("about-section").style.display = "none";
+    document.getElementById("contact-section").style.display = "none";
+    document.getElementById("experience-section").style.display = "none";
+}
+
+function showHome() {
+    hideAllSections();
+    document.getElementById("home-section").style.display = "block";
+    window.scrollTo(0,0);
+}
+</script>
+
+<script>
+  var typed = new Typed(".typed-roles", {
+    strings: ["Backend Developer", "MERN Stack Developer", "AI / ML Enthusiast", "Tech Explorer"],
+    typeSpeed: 70,
+    backSpeed: 50,
+    backDelay: 1500,
+    loop: true
+  });
+</script>
 
 
 </body>

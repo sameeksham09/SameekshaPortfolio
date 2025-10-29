@@ -44,6 +44,25 @@ body{
   animation: fadeIn 1.5s ease forwards;
 }
 
+.hero-right img {
+    width: 100%;           /* takes full width of container */
+    max-width: 450px;      /* restricts max size */
+    height: auto;          /* keeps aspect ratio */
+    display: block;
+    object-fit: contain;   /* ensures no distortion */
+    animation: float 3s ease-in-out infinite;
+    margin: 0 auto;        /* center horizontally */
+}
+
+
+/* Optional simple floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+
 .profile-pic {
   width: 300px;
   height: 300px;
@@ -621,5 +640,54 @@ html {
     top: 14px;
     right: 14px;
   }
+}
+
+.experience {
+    position: relative;
+    padding: 50px 20px 100px 20px;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #c9d1d9;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+.experience-card {
+    background-color: #161b22;
+    color: #c9d1d9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+}
+
+.experience h2 {
+    color: #c084fc; /* accent color */
+}
+
+.typed-roles {
+    color: #b084cc; /* soft blush-purple */
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.logo-circle {
+    height: 45px;
+    width: 45px;
+    background-color: #007ced; /* accent color */
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.logo-circle:hover {
+    transform: scale(1.1);
 }
 
