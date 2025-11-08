@@ -14,26 +14,27 @@
     <div id="home-section">
     <div class="hero-header">
     <div class="wrapper">
-    <header>
-        <div class="logo">
+    <header class="navbar">
+  <div class="logo">
     <div class="logo-circle">S</div>
     <div class="logo-text">Sameeksha Mahesh</div>
-</div>
+  </div>
 
         <nav>
-            <div class="togglebtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        <ul class = "navlinks">
-            <li><a href="#">Home</a></li>
-            <li><a href="#" onclick="showAbout()">About</a></li>
-            <li><a href="#" onclick="showExperience()">Experience</a></li> <!-- updated -->
-            <li><a href="#" onclick="showProjects()">Projects</a></li>
-            <li><a href="#" onclick="showContact()">Contact</a></li>
-        </ul>
-        </nav>
+    <ul class="nav-links">
+      <li><a href="#home-section" onclick="showHome()">Home</a></li>
+      <li><a href="#about-section" onclick="showAbout()">About</a></li>
+      <li><a href="#experience-section" onclick="showExperience()">Experience</a></li>
+      <li><a href="#projects-section" onclick="showProjects()">Projects</a></li>
+      <li><a href="#research-section" onclick="showResearch()">Research</a></li>
+      <li><a href="#contact-section" onclick="showContact()">Contact</a></li>
+    </ul>
+    <div class="toggle-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
     </header>
          <div class="hero-content">
   <div class="hero-left">
@@ -77,48 +78,72 @@
         })
     </script>
 
-    <!-- Projects Section -->
-     <div id="projects-section" style="display:none;">
-<section class="projects" id="projects">
+    <!----Research Section.      -->
+    <div id="research-section" style="display:none;">
+  <section class="research-section">
+    <!-- Back to Home Button -->
     <button class="btn back-home" onclick="showHome()">Back to Home</button>
-    <h2>Projects</h2>
-    <div class="project-cards">
 
-        <!-- Project 1 -->
-        <div class="project-card">
-    <h3>Fake News Detection System</h3>
-    <span class="project-type">AI / ML</span>
-    <p>Developed a full-stack web app to classify news credibility using NLP and ML algorithms.</p>
-    <p><strong>Technologies:</strong> Java, JavaScript, Python, SVM, Random Forest</p>
-    <ul>
-        <li>Achieved 92% classification accuracy</li>
-        <li>Used Python libraries for data preprocessing and model evaluation</li>
-    </ul>
-    <div class="project-links">
-        <a href="https://github.com/sameeksham09/fake-news-detection" target="_blank">View on GitHub</a>
+    <h2 class="section-title">Research</h2>
+
+    <div class="research-cards">
+      <!-- Example Research Card -->
+      <div class="research-card">
+        <h3>AI-Powered Fake News Detection</h3>
+        <p>Published research on NLP-based classification techniques for identifying fake news.</p>
+        <p><strong>Technologies:</strong> Python, NLP, Machine Learning</p>
+        <a href="#" target="_blank" class="btn">View Paper</a>
+      </div>
+
+      <div class="research-card">
+        <h3>Secure Blockchain Voting System</h3>
+        <p>Explored tamper-proof voting systems using Ethereum smart contracts.</p>
+        <p><strong>Technologies:</strong> Solidity, Ethereum, Smart Contracts</p>
+        <a href="#" target="_blank" class="btn">View Paper</a>
+      </div>
+
+      <!-- Add more cards as needed -->
     </div>
+  </section>
 </div>
 
 
-        <!-- Project 2 -->
-        <div class="project-card">
-            <h3>Blockchain E-Voting System</h3>
-            <p>Implemented a secure voting platform on Ethereum blockchain ensuring tamper-proof integrity.</p>
-            <p><strong>Technologies:</strong> Solidity, Ethereum, MetaMask, JavaScript</p>
-            <a href="https://github.com/sameeksham09/blockchain-e-voting" target="_blank">View on GitHub</a>
-        </div>
+    <!-- Projects Section -->
+<div id="projects-section" style="display:none;">
+  <section class="projects-section">
+    <!-- Back to Home Button -->
+    <button class="btn back-home" onclick="showHome()">Back to Home</button>
 
-        <!-- Project 3 -->
-        <div class="project-card">
-            <h3>Secure Healthcare Portal</h3>
-            <p>Built a patient portal with RBAC, two-factor authentication, and RSA-based encryption.</p>
-            <p><strong>Technologies:</strong> Java, Spring Boot, SQL, AES-256, RSA</p>
-            <a href="https://github.com/sameeksham09/secure-healthcare-portal" target="_blank">View on GitHub</a>
-        </div>
+    <h2 class="section-title">Projects</h2>
 
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-card">
+        <h3>Fake News Detection System</h3>
+        <p>Developed a full-stack web app to classify news credibility using NLP and ML algorithms.</p>
+        <p><strong>Technologies:</strong> Java, Python, SVM, Random Forest</p>
+        <a href="https://github.com/sameeksham09/fake-news-detection" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <h3>Blockchain E-Voting System</h3>
+        <p>Implemented a secure voting platform on Ethereum ensuring tamper-proof integrity.</p>
+        <p><strong>Technologies:</strong> Solidity, Ethereum, MetaMask, JavaScript</p>
+        <a href="https://github.com/sameeksham09/blockchain-e-voting" target="_blank" class="btn">View on GitHub</a>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <h3>Secure Healthcare Portal</h3>
+        <p>Built a patient portal with RBAC, two-factor authentication, and RSA-based encryption.</p>
+        <p><strong>Technologies:</strong> Java, Spring Boot, SQL, AES-256, RSA</p>
+        <a href="https://github.com/sameeksham09/secure-healthcare-portal" target="_blank" class="btn">View on GitHub</a>
+      </div>
     </div>
-</section>
+  </section>
 </div>
+
 <script>
 function showProjects() {
     document.getElementById("home-section").style.display = "none";
@@ -248,24 +273,73 @@ function showContact() {
 }
 </script>
 
-<!-- Experience Section -->
 <div id="experience-section" style="display:none;">
-    <section class="experience">
-        <h2>Experience</h2>
-        <div class="experience-cards">
-            <div class="experience-card">
-                <h3>Software Developer | Perfios Software Solutions</h3>
-                <p>Worked on backend development using Java, Spring Boot, and SQL.</p>
-                <ul>
-                    <li>Implemented REST APIs for financial applications</li>
-                    <li>Optimized database queries for large datasets</li>
-                    <li>Collaborated in agile teams and code reviews</li>
-                </ul>
-            </div>
+  <section class="experience-section">
+    <button class="btn back-home" onclick="showHome()">Back to Home</button>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="experience-cards">
+      <!-- CARD 1 -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <h3>Software Developer <span>| Perfios Software Solutions</span></h3>
+          <p class="exp-duration">July 2022 – July 2024</p>
         </div>
-        <button class="back-home" onclick="showHome()">Back to Home</button>
-    </section>
+        <p class="exp-summary">
+          Worked on backend development using Java, Spring Boot, and SQL for financial data systems.
+        </p>
+
+        <ul class="exp-points">
+          <li>Implemented REST APIs for financial applications</li>
+          <li>Optimized database queries for large datasets</li>
+          <li class="hidden-point">Improved API response times by 30% through caching mechanisms</li>
+          <li class="hidden-point">Collaborated in agile teams to ensure timely feature delivery</li>
+        </ul>
+
+        <button class="btn read-more-btn">Read more</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <h3>Research Intern <span>| BMSCE AI Lab</span></h3>
+          <p class="exp-duration">Jan 2022 – June 2022</p>
+        </div>
+        <p class="exp-summary">
+          Designed and trained NLP models for fake news classification using Python and Scikit-learn.
+        </p>
+
+        <ul class="exp-points">
+          <li>Implemented text preprocessing and feature extraction techniques</li>
+          <li>Built models using SVM and Random Forest with 90%+ accuracy</li>
+          <li class="hidden-point">Conducted experiments with LSTM for sequential data learning</li>
+          <li class="hidden-point">Published paper in AI and cybersecurity conference</li>
+        </ul>
+
+        <button class="btn read-more-btn">Read more</button>
+      </div>
+
+    </div>
+  </section>
 </div>
+
+
+</div>
+
+<script>
+document.querySelectorAll('.read-more-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const hiddenPoints = button.parentElement.querySelectorAll('.hidden-point');
+    const expanded = button.textContent === 'Read less';
+
+    hiddenPoints.forEach(point => {
+      point.style.display = expanded ? 'none' : 'list-item';
+    });
+
+    button.textContent = expanded ? 'Read more' : 'Read less';
+  });
+});
+</script>
 
 <!-- Add JS for Experience -->
 <script>
@@ -300,6 +374,7 @@ function showHome() {
   });
 </script>
 
+<script src="script.js"></script>
 
 </body>
 </html>
