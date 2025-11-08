@@ -26,6 +26,7 @@
       <li><a href="#about-section" onclick="showAbout()">About</a></li>
       <li><a href="#experience-section" onclick="showExperience()">Experience</a></li>
       <li><a href="#projects-section" onclick="showProjects()">Projects</a></li>
+      <li><a href="#research-section" onclick="showResearch()">Research</a></li>
       <li><a href="#contact-section" onclick="showContact()">Contact</a></li>
     </ul>
     <div class="toggle-btn">
@@ -76,6 +77,36 @@
             loop:true
         })
     </script>
+
+    <!----Research Section.      -->
+    <div id="research-section" style="display:none;">
+  <section class="research-section">
+    <!-- Back to Home Button -->
+    <button class="btn back-home" onclick="showHome()">Back to Home</button>
+
+    <h2 class="section-title">Research</h2>
+
+    <div class="research-cards">
+      <!-- Example Research Card -->
+      <div class="research-card">
+        <h3>AI-Powered Fake News Detection</h3>
+        <p>Published research on NLP-based classification techniques for identifying fake news.</p>
+        <p><strong>Technologies:</strong> Python, NLP, Machine Learning</p>
+        <a href="#" target="_blank" class="btn">View Paper</a>
+      </div>
+
+      <div class="research-card">
+        <h3>Secure Blockchain Voting System</h3>
+        <p>Explored tamper-proof voting systems using Ethereum smart contracts.</p>
+        <p><strong>Technologies:</strong> Solidity, Ethereum, Smart Contracts</p>
+        <a href="#" target="_blank" class="btn">View Paper</a>
+      </div>
+
+      <!-- Add more cards as needed -->
+    </div>
+  </section>
+</div>
+
 
     <!-- Projects Section -->
 <div id="projects-section" style="display:none;">
@@ -242,24 +273,73 @@ function showContact() {
 }
 </script>
 
-<!-- Experience Section -->
 <div id="experience-section" style="display:none;">
-    <section class="experience">
-        <h2>Experience</h2>
-        <div class="experience-cards">
-            <div class="experience-card">
-                <h3>Software Developer | Perfios Software Solutions</h3>
-                <p>Worked on backend development using Java, Spring Boot, and SQL.</p>
-                <ul>
-                    <li>Implemented REST APIs for financial applications</li>
-                    <li>Optimized database queries for large datasets</li>
-                    <li>Collaborated in agile teams and code reviews</li>
-                </ul>
-            </div>
+  <section class="experience-section">
+    <button class="btn back-home" onclick="showHome()">Back to Home</button>
+    <h2 class="section-title">Experience</h2>
+
+    <div class="experience-cards">
+      <!-- CARD 1 -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <h3>Software Developer <span>| Perfios Software Solutions</span></h3>
+          <p class="exp-duration">July 2022 – July 2024</p>
         </div>
-        <button class="back-home" onclick="showHome()">Back to Home</button>
-    </section>
+        <p class="exp-summary">
+          Worked on backend development using Java, Spring Boot, and SQL for financial data systems.
+        </p>
+
+        <ul class="exp-points">
+          <li>Implemented REST APIs for financial applications</li>
+          <li>Optimized database queries for large datasets</li>
+          <li class="hidden-point">Improved API response times by 30% through caching mechanisms</li>
+          <li class="hidden-point">Collaborated in agile teams to ensure timely feature delivery</li>
+        </ul>
+
+        <button class="btn read-more-btn">Read more</button>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="experience-card">
+        <div class="exp-header">
+          <h3>Research Intern <span>| BMSCE AI Lab</span></h3>
+          <p class="exp-duration">Jan 2022 – June 2022</p>
+        </div>
+        <p class="exp-summary">
+          Designed and trained NLP models for fake news classification using Python and Scikit-learn.
+        </p>
+
+        <ul class="exp-points">
+          <li>Implemented text preprocessing and feature extraction techniques</li>
+          <li>Built models using SVM and Random Forest with 90%+ accuracy</li>
+          <li class="hidden-point">Conducted experiments with LSTM for sequential data learning</li>
+          <li class="hidden-point">Published paper in AI and cybersecurity conference</li>
+        </ul>
+
+        <button class="btn read-more-btn">Read more</button>
+      </div>
+
+    </div>
+  </section>
 </div>
+
+
+</div>
+
+<script>
+document.querySelectorAll('.read-more-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const hiddenPoints = button.parentElement.querySelectorAll('.hidden-point');
+    const expanded = button.textContent === 'Read less';
+
+    hiddenPoints.forEach(point => {
+      point.style.display = expanded ? 'none' : 'list-item';
+    });
+
+    button.textContent = expanded ? 'Read more' : 'Read less';
+  });
+});
+</script>
 
 <!-- Add JS for Experience -->
 <script>
