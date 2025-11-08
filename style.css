@@ -146,6 +146,22 @@ header{
     color: #fff;
 }
 
+nav .navlinks{
+    position: absolute;
+    top: 110px;
+    right: -100%;;
+    bottom: 0;
+    width: 60%;
+    height: 100vh;
+    background-color: #0d1117;
+    z-index: 3;
+    box-shadow: 5px 13px 30px rgba(0, 0 ,0,0.1);
+    transition: 0.5s;
+    padding: 25px 0px;
+    flex-direction: column;
+}
+
+
 nav .togglebtn{
     width: 35px;
     height: 35px;
@@ -167,29 +183,13 @@ nav .togglebtn span{
 }
 
 /* NAV LINKS STYLING */
-nav .navlinks{
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-}
-
-nav .navlinks li{
+.nav-links li {
     margin-right: 2rem;
     position: relative;
 }
 
-nav .navlinks li a{
-    color: #c9d1d9; /* light text for dark background */
-    font-weight: 500;
-    font-size: 1rem;
-    text-decoration: none;
-    padding: 5px 0;
-    transition: color 0.3s ease, transform 0.3s ease;
-    position: relative;
-}
-
 /* Underline hover effect */
-nav .navlinks li a::after {
+.nav-links li a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -200,11 +200,20 @@ nav .navlinks li a::after {
     transition: width 0.3s ease;
 }
 
-nav .navlinks li a:hover::after {
+.nav-links li a:hover::after {
     width: 100%;
 }
 
-nav .navlinks li a:hover {
+.nav-links li a {
+    color: white !important;  /* force text to white */
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;  /* needed for underline hover */
+    transition: 0.3s;
+}
+
+
+.nav-links li a:hover {
     color: #238636;
     transform: scale(1.05);
     background-color: rgba(35,134,54,0.1);
@@ -212,54 +221,50 @@ nav .navlinks li a:hover {
     padding: 2px 5px;
 }
 
-/* RESPONSIVE NAV */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  flex-direction: row; /* important for horizontal layout */
+}
+
+
+/* Responsive nav */
 @media(max-width: 930px){
-    nav .togglebtn{
-        display: initial;
+    .toggle-btn{
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
     }
 
-    .click{
-        top:45px
+    .toggle-btn span{
+        height: 3px;
+        width: 25px;
+        background-color: white;
+        border-radius: 2px;
     }
-    .click span{
+
+    .nav-links {
         position: absolute;
-        margin-top: 12px
-        }
+        top: 80px;
+        right: -100%;
+        width: 60%;
+        height: 100vh;
+        background-color: #0d1117;
+        flex-direction: column;
+        padding-top: 2rem;
+        transition: 0.5s;
+    }
 
-        .click span:first-child{
-            transform: rotate(-40deg);
-        }
-        .click span:nth-child(2){
-            opacity: 0;
-            margin: 0;
-        }
-        .click span:last-child{
-            transform: rotate(45deg);
-            top: 0;
-        }
-        nav .navlinks{
-            position: absolute;
-            top: 110px;
-            right: -100%;;
-            bottom: 0;
-            width: 60%;
-            height: 100vh;
-            background-color: #0d1117;
-            z-index: 3;
-            box-shadow: 5px 13px 30px rgba(0, 0 ,0,0.1);
-            transition: 0.5s;
-            padding: 25px 0px;
-            flex-direction: column;
-        }
+    .nav-links.open{
+        right:0;
+    }
 
-        nav .navlinks li{
-            display: block;
-            margin: 20px 0;
-        }
-
-        nav .navlinks.open{
-            right:0;
-        }
+    .nav-links li{
+        display: block;
+        margin: 20px 0;
+    }
 }
 
 .container{
@@ -388,6 +393,21 @@ html {
 }
 
 /* Projects Section */
+.projects-section {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #2b1055, #7597de);
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 60px;
+  position: relative;
+}
+
 .projects {
     position: relative;
     padding: 50px 20px 100px 20px;
@@ -397,19 +417,27 @@ html {
     min-height: 100vh;
 }
 
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
 .project-card {
-    background-color: #1e1a2d;
-    color: #c9d1d9;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-    transition: transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: #fff;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  transform: translateY(-10px);
+  box-shadow: 0 6px 25px rgba(255, 119, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .project-cards {
@@ -417,6 +445,79 @@ html {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff77ff;
+}
+
+.project-card .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ff77ff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+/* === Projects Section === */
+.projects-section {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #2b1055, #7597de);
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 25px rgba(255, 119, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #ff77ff;
+}
+
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.project-card .btn:hover {
+  background: #d15edf;
+}
+
 
 /* About Section */
 .about {
