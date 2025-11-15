@@ -392,124 +392,79 @@ html {
     color: #fff;
 }
 
-/* Projects Section */
+/* -------------------- PROJECTS SECTION (Light Theme) -------------------- */
 
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 60px;
-  position: relative;
+.projects-section {
+  background-color: #f9fafb; /* same as experience */
+  color: #1f2937;
+  padding: 80px 0;
 }
 
-.projects {
-    position: relative;
-    padding: 50px 20px 100px 20px;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: #c9d1d9;
-    font-family: poppins, sans-serif;
-    min-height: 100vh;
+.projects-section .section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.projects-section .section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #6d28d9; /* same purple */
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 .projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  justify-content: center;
-  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 80%;
+  max-width: 900px;
+  margin: auto;
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 30px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  color: #fff;
+  background-color: white;  /* SAME AS EXPERIENCE */
+  border-radius: 15px; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 25px 30px;
+  transition: transform 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 25px rgba(255, 119, 255, 0.3);
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.project-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+  transform: translateY(-4px); /* match experience hover */
 }
 
 .project-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b; /* heading color same as experience */
   margin-bottom: 10px;
-  color: #ff77ff;
+}
+
+.project-card p {
+  color: #4b5563; /* same description color */
+  line-height: 1.6;
 }
 
 .project-card .btn {
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #ff77ff;
-  color: #fff;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #6d28d9; /* same purple */
+  color: white;
   border-radius: 8px;
   text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-/* === Projects Section === */
-.projects-section {
-  min-height: 100vh;
-  background: radial-gradient(circle at top left, #2b1055, #7597de);
-  padding: 80px 50px;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 60px;
-  position: relative;
-}
-
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  justify-content: center;
-  align-items: stretch;
-}
-
-.project-card {
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 30px;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  color: #fff;
-}
-
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 25px rgba(255, 119, 255, 0.3);
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.project-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #ff77ff;
-}
-
-.project-card p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #e0e0e0;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 .project-card .btn:hover {
-  background: #d15edf;
+  background-color: #5b21b6; /* darker purple */
 }
 
 
