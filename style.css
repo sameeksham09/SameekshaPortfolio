@@ -304,12 +304,12 @@ nav .togglebtn span{
 }
 
 .hero-text h5 span{
-    color:#238636;
+    color: #5b21b6;
     font-size: 16px;
 }
 
 .hero-text h1{
-    color:#238636;
+    color: #5b21b6;
     font: 3rem;
 }
 
@@ -323,7 +323,7 @@ nav .togglebtn span{
 
 .btn-group .btn{
     border-radius: 30px;
-    border: 2px solid #238636; 
+    border: 2px solid #5b21b6; 
     color: #c9d1d9;
     background-color: #161b22;
     padding: 12px 25px;
@@ -336,7 +336,7 @@ nav .togglebtn span{
     border-color: #007ced;
 }
 .btn-group .btn:hover {
-    background-color: #238636;
+    background-color: #5b21b6;
     color: #fff;
 }
 
@@ -351,7 +351,7 @@ nav .togglebtn span{
 }
 
 .hero-text .social i:hover {
-    color: #238636;
+    color: #5b21b6;
 }
 
 .hero-text .social a {
@@ -372,25 +372,28 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Back to home button */
 .back-home {
+    display: block;
     position: absolute;
     top: 20px;
     right: 20px;
     padding: 10px 20px;
-    border-radius: 30px;
-    border: 2px solid #238636;
-    background-color: #fff;
-    color: #238636;
+    border-radius: 6px;
+    border: none;
+    background-color: #6d28d9;
+  color: white;
+  font-weight: 500;
     cursor: pointer;
-    transition: 0.3s;
-    z-index: 10;          
+    transition: background-color 0.3s ease;
+    z-index: 10;       
+    margin: 0 auto 30px auto;
+  
 }
 
 .back-home:hover {
-    background-color: #238636;
-    color: #fff;
+    background-color: #5b21b6;
 }
+
 
 /* -------------------- PROJECTS SECTION (Light Theme) -------------------- */
 
@@ -472,8 +475,9 @@ html {
 .about {
     position: relative;
     padding: 50px 20px 100px 20px;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: #c9d1d9;
+    /*background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);*/
+    background-color: #f9fafb;
+    color: #1f2937;
     font-family: poppins, sans-serif;
     min-height: 100vh;
     animation: fadeIn 0.8s ease forwards;
@@ -487,7 +491,7 @@ html {
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #238636;
+    color: #4b5563;
     animation: fadeIn 0.8s ease forwards;
     animation-delay: 0.1s;
 }
@@ -523,7 +527,7 @@ html {
 }
 
 .about-text h3 {
-    color: #238636;
+    color: #6d28d9;
     margin-top: 20px;
 }
 
@@ -547,8 +551,8 @@ html {
 .contact {
   position: relative;
   padding: 50px 20px 100px;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: #c9d1d9;
+  background-color: #f9fafb;
+  color: #1f2937;
   min-height: 100vh;
   font-family: poppins, sans-serif;
 }
@@ -560,12 +564,13 @@ html {
 
 .contact h2 {
   font-size: 2.5rem;
-  color: #238636;
+  color: #5b21b6;
   margin-bottom: 10px;
 }
 
 .contact-sub {
-  color: #bfc9cf;
+  background-color: #f9fafb;
+  color: #1f2937;
   margin-bottom: 30px;
 }
 
@@ -579,7 +584,8 @@ html {
 
 /* Form styling */
 .contact-form {
-  background: rgba(22,27,34,0.6);
+  background: #1f2937;
+ /* color: #1f2937;*/
   padding: 20px;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.03);
@@ -598,7 +604,7 @@ html {
   padding: 10px 12px;
   border-radius: 8px;
   border: 1px solid rgba(255,255,255,0.06);
-  background: #0f1420;
+  background: #c9d1d9;
   color: #c9d1d9;
   margin-bottom: 16px;
   font-size: 0.95rem;
@@ -617,7 +623,7 @@ html {
 
 .btn {
   border-radius: 30px;
-  border: 2px solid #238636;
+  border: 2px solid #5b21b6;
   color: #c9d1d9;
   background-color: #161b22;
   padding: 10px 18px;
@@ -626,7 +632,7 @@ html {
 }
 
 .btn:hover {
-  background-color: #238636;
+  background-color: #5b21b6;
   color: #fff;
 }
 
@@ -639,16 +645,16 @@ html {
 .contact-info {
   background: transparent;
   padding: 12px 6px;
-  color: #c9d1d9;
+  color: #5b21b6;
 }
 
 .contact-info h3 {
-  color: #238636;
+  color: #5b21b6;
   margin-bottom: 10px;
 }
 
 .contact-info p {
-  color: #bfc9cf;
+  color: #5b21b6;
   margin-bottom: 10px;
   font-size: 0.95rem;
 }
@@ -657,7 +663,7 @@ html {
   display: inline-flex;
   gap: 8px;
   align-items: center;
-  color: #c9d1d9;
+  color: #5b21b6;
   text-decoration: none;
   margin-bottom: 8px;
   padding: 6px;
@@ -670,7 +676,7 @@ html {
 }
 
 .contact-socials a:hover {
-  color: #238636;
+  color: #5b21b6;
   background: rgba(35, 134, 54, 0.06);
 }
 
