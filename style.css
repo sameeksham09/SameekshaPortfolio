@@ -141,7 +141,7 @@ header{
     width: 45px;
     background-color: #007ced;
     border-radius: 50%;
-    color: #fff;
+    color: #6d28d9;
     font-weight: 700;
     font-size: 1.5rem;
     padding: 10px;
@@ -153,7 +153,7 @@ header{
 .logo .logo-text{
     font-size: 24px;
     font-weight: 500;
-    color: #fff;
+    color: #1f2937;
 }
 
 nav .navlinks{
@@ -215,7 +215,7 @@ nav .togglebtn span{
 }
 
 .nav-links li a {
-    color: white !important;  /* force text to white */
+    color: #1f2937 !important;  /* force text to white */
     text-decoration: none;
     font-weight: 500;
     position: relative;  /* needed for underline hover */
