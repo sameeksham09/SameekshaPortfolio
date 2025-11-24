@@ -8,7 +8,7 @@
 
 body{
     overflow-x: hidden;
-    background-color: #0d1117; /* GitHub dark background for body */
+    background-color: #f9fafb; /* GitHub dark background for body */
     color: #c9d1d9; /* default text color */
 }
 
@@ -16,8 +16,8 @@ body{
     width: 100%;
     height: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: #c9d1d9;
+    background-color: #f9fafb; /* dark background */
+  color: #1f2937 ;
 }
 
 .hero-content {
@@ -27,7 +27,7 @@ body{
   height: 90vh;
   width: 90%;
   margin: 0 auto;
-  color: #fff;
+  color: #1f2937;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -62,6 +62,15 @@ body{
     100% { transform: translateY(0px); }
 }
 
+.hero-left, .hero-right, .hero-text,
+.intro, .role, .intro-text {
+    color: #1f2937;
+}
+
+.hero-text h5 { color:#1f2937; }
+.hero-text h5 span { color: #5b21b6; }
+.hero-text h1 { color: #5b21b6; }
+.hero-text p { color:#1f2937; }
 
 .profile-pic {
   width: 300px;
@@ -90,8 +99,9 @@ body{
   font-size: 1rem;
   max-width: 450px;
   line-height: 1.6;
-  color: #ccc;
+  color: #1f2937;
 }
+
 
 /* Animations */
 @keyframes slideInLeft {
@@ -131,7 +141,7 @@ header{
     width: 45px;
     background-color: #007ced;
     border-radius: 50%;
-    color: #fff;
+    color: #6d28d9;
     font-weight: 700;
     font-size: 1.5rem;
     padding: 10px;
@@ -143,7 +153,7 @@ header{
 .logo .logo-text{
     font-size: 24px;
     font-weight: 500;
-    color: #fff;
+    color: #1f2937;
 }
 
 nav .navlinks{
@@ -205,7 +215,7 @@ nav .togglebtn span{
 }
 
 .nav-links li a {
-    color: white !important;  /* force text to white */
+    color: #1f2937 !important;  /* force text to white */
     text-decoration: none;
     font-weight: 500;
     position: relative;  /* needed for underline hover */
@@ -299,22 +309,22 @@ nav .togglebtn span{
 }
 
 .hero-text h5{
-    color:#c9d1d9;
+    color:#1f2937;
     font-size: 14px;
 }
 
 .hero-text h5 span{
-    color:#238636;
+    color: #5b21b6;
     font-size: 16px;
 }
 
 .hero-text h1{
-    color:#238636;
+    color: #5b21b6;
     font: 3rem;
 }
 
 .hero-text p{
-    color:#c9d1d9;
+    color:#1f2937;
 }
 
 .btn-group{
@@ -323,7 +333,7 @@ nav .togglebtn span{
 
 .btn-group .btn{
     border-radius: 30px;
-    border: 2px solid #238636; 
+    border: 2px solid #5b21b6; 
     color: #c9d1d9;
     background-color: #161b22;
     padding: 12px 25px;
@@ -336,7 +346,7 @@ nav .togglebtn span{
     border-color: #007ced;
 }
 .btn-group .btn:hover {
-    background-color: #238636;
+    background-color: #5b21b6;
     color: #fff;
 }
 
@@ -351,7 +361,7 @@ nav .togglebtn span{
 }
 
 .hero-text .social i:hover {
-    color: #238636;
+    color: #5b21b6;
 }
 
 .hero-text .social a {
@@ -372,25 +382,32 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Back to home button */
-.back-home {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+.btn.back-home {
+    display: block;
+    margin: 0 auto 30px auto;   /* same as Experience */
+    background-color: #6d28d9;
+    position: absolute;   /* position it relative to the section */
+    top: 20px;            /* distance from top */
+    right: 20px;        
+    color: white;
+    border: none;
     padding: 10px 20px;
-    border-radius: 30px;
-    border: 2px solid #238636;
-    background-color: #fff;
-    color: #238636;
+    border-radius: 6px;
+    font-weight: 500;
     cursor: pointer;
-    transition: 0.3s;
-    z-index: 10;          
+    transition: background-color 0.3s ease;
+    text-align: center;
 }
 
-.back-home:hover {
-    background-color: #238636;
-    color: #fff;
+.btn.back-home:hover {
+    background-color: #5b21b6;
 }
+
+
+.back-home:hover {
+    background-color: #5b21b6;
+}
+
 
 /* -------------------- PROJECTS SECTION (Light Theme) -------------------- */
 
@@ -472,8 +489,9 @@ html {
 .about {
     position: relative;
     padding: 50px 20px 100px 20px;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: #c9d1d9;
+    /*background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);*/
+    background-color: #f9fafb;
+    color: #1f2937;
     font-family: poppins, sans-serif;
     min-height: 100vh;
     animation: fadeIn 0.8s ease forwards;
@@ -487,7 +505,7 @@ html {
 .about h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
-    color: #238636;
+    color: #f9fafb;
     animation: fadeIn 0.8s ease forwards;
     animation-delay: 0.1s;
 }
@@ -523,7 +541,7 @@ html {
 }
 
 .about-text h3 {
-    color: #238636;
+    color: #6d28d9;
     margin-top: 20px;
 }
 
@@ -547,8 +565,8 @@ html {
 .contact {
   position: relative;
   padding: 50px 20px 100px;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-  color: #c9d1d9;
+  background-color: #f9fafb;
+  color: #1f2937;
   min-height: 100vh;
   font-family: poppins, sans-serif;
 }
@@ -560,12 +578,13 @@ html {
 
 .contact h2 {
   font-size: 2.5rem;
-  color: #238636;
+  color: #5b21b6;
   margin-bottom: 10px;
 }
 
 .contact-sub {
-  color: #bfc9cf;
+  background-color: #f9fafb;
+  color: #1f2937;
   margin-bottom: 30px;
 }
 
@@ -579,7 +598,8 @@ html {
 
 /* Form styling */
 .contact-form {
-  background: rgba(22,27,34,0.6);
+  background: #1f2937;
+ /* color: #1f2937;*/
   padding: 20px;
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.03);
@@ -598,7 +618,7 @@ html {
   padding: 10px 12px;
   border-radius: 8px;
   border: 1px solid rgba(255,255,255,0.06);
-  background: #0f1420;
+  background: #c9d1d9;
   color: #c9d1d9;
   margin-bottom: 16px;
   font-size: 0.95rem;
@@ -617,7 +637,7 @@ html {
 
 .btn {
   border-radius: 30px;
-  border: 2px solid #238636;
+  border: 2px solid #5b21b6;
   color: #c9d1d9;
   background-color: #161b22;
   padding: 10px 18px;
@@ -626,7 +646,7 @@ html {
 }
 
 .btn:hover {
-  background-color: #238636;
+  background-color: #5b21b6;
   color: #fff;
 }
 
@@ -639,16 +659,16 @@ html {
 .contact-info {
   background: transparent;
   padding: 12px 6px;
-  color: #c9d1d9;
+  color: #5b21b6;
 }
 
 .contact-info h3 {
-  color: #238636;
+  color: #5b21b6;
   margin-bottom: 10px;
 }
 
 .contact-info p {
-  color: #bfc9cf;
+  color: #5b21b6;
   margin-bottom: 10px;
   font-size: 0.95rem;
 }
@@ -657,7 +677,7 @@ html {
   display: inline-flex;
   gap: 8px;
   align-items: center;
-  color: #c9d1d9;
+  color: #5b21b6;
   text-decoration: none;
   margin-bottom: 8px;
   padding: 6px;
@@ -670,7 +690,7 @@ html {
 }
 
 .contact-socials a:hover {
-  color: #238636;
+  color: #5b21b6;
   background: rgba(35, 134, 54, 0.06);
 }
 
