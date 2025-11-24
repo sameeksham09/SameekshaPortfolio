@@ -904,3 +904,68 @@ html {
     transform: scale(1.1);
 }
 
+.research-section {
+  width: 80%;
+  margin: 0 auto;
+  padding: 60px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.research-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 40px;
+}
+
+.publication-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.publication-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
+
+.pub-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.pub-authors {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.pub-venue {
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+
+.pub-link {
+  font-size: 0.9rem;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pub-link:hover {
+  text-decoration: underline;
+}
+
+.pub-abstract {
+    font-size: 0.95rem;
+    color: #374151; /* dark gray for readability */
+    margin: 0.5rem 0 1rem 0;
+    line-height: 1.5;
+}

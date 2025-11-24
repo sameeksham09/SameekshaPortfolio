@@ -16,13 +16,13 @@ var typed = new Typed(".typed-roles", {
 });
 
 // Section Navigation
-function hideAllSections() {
-    document.getElementById("home-section").style.display = "none";
-    document.getElementById("projects-section").style.display = "none";
-    document.getElementById("about-section").style.display = "none";
-    document.getElementById("contact-section").style.display = "none";
-    document.getElementById("experience-section").style.display = "none";
-}
+// function hideAllSections() {
+//     document.getElementById("home-section").style.display = "none";
+//     document.getElementById("projects-section").style.display = "none";
+//     document.getElementById("about-section").style.display = "none";
+//     document.getElementById("contact-section").style.display = "none";
+//     document.getElementById("experience-section").style.display = "none";
+// }
 
 function showHome() {
     hideAllSections();
@@ -54,16 +54,18 @@ function showExperience() {
     window.scrollTo(0,0);
 }
 
+function hideAllSections() {
+    const sections = ["home-section", "projects-section", "about-section", "contact-section", "experience-section", "research-section"];
+    sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = "none";
+    });
+}
+
+
 function showResearch() {
     hideAllSections();
     document.getElementById("research-section").style.display = "block";
-    window.scrollTo(0,0);
+    window.scrollTo(0, 0);
 }
 
-function hideAllSections() {
-    const sections = ["home-section","projects-section","about-section","contact-section","experience-section","research-section"];
-    sections.forEach(id => {
-        const el = document.getElementById(id);
-        if(el) el.style.display = "none";
-    });
-}

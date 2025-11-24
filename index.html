@@ -13,9 +13,6 @@
 <body>
     <div id="home-section">
     <div class="hero-header">
-     <div class="hero-welcome-box">
-  <h2 class="welcome-text">Welcome to my portfolio</h2>
-</div>
 
     <div class="wrapper">
     <header class="navbar">
@@ -30,7 +27,7 @@
       <li><a href="#about-section" onclick="showAbout()">About</a></li>
       <li><a href="#experience-section" onclick="showExperience()">Experience</a></li>
       <li><a href="#projects-section" onclick="showProjects()">Projects</a></li>
-      <li><a href="#research-section" onclick="showResearch()">Research</a></li>
+      <li><a href="javascript:void(0)" onclick="showResearch()">Research</a></li>
       <li><a href="#contact-section" onclick="showContact()">Contact</a></li>
     </ul>
     <div class="toggle-btn">
@@ -85,32 +82,50 @@
     <!----Research Section.      -->
     <div id="research-section" style="display:none;">
   <section class="research-section">
-    <!-- Back to Home Button -->
-    <button class="btn back-home" onclick="showHome()">Back to Home</button>
+  <h1 class="research-title">Publications</h1>
 
-    <h2 class="section-title">Research</h2>
+  <div class="publication-card">
+    <h3 class="pub-title">
+      Security and Integrity of Healthcare Data in E-Consulting Systems
+    </h3>
+    <p class="pub-authors">
+      Varun A, Dr. Deepak G, <strong>Sameeksha M</strong>, Kaviraj SH, Kishore
+    </p>
+    <p class="pub-venue">
+      International Conference on Computing and Intelligent Information Systems (ICCIIS)
+    </p>
+    <p class="pub-abstract">
+    In the ever-evolving landscape of healthcare technology, the security and integrity
+of patient data have become paramount. As the healthcare industry transitions to E-Consulting
+systems, the need to preserve data integrity has gained significant importance. This article aims
+to delve into the concept of data integrity in the context of healthcare information systems, specifically focusing on E-Consulting platforms. By understanding the nuances of data integrity, we
+can better appreciate its crucial role in ensuring the confidentiality, accuracy
+  </p>
+    <a href="https://icciis.bnmit.in/" class="pub-link" target="_blank">View Paper (ICCIIS)</a>
+  </div>
 
-    <div class="research-cards">
-      <!-- Example Research Card -->
-      <div class="research-card">
-        <h3>AI-Powered Fake News Detection</h3>
-        <p>Published research on NLP-based classification techniques for identifying fake news.</p>
-        <p><strong>Technologies:</strong> Python, NLP, Machine Learning</p>
-        <a href="#" target="_blank" class="btn">View Paper</a>
-      </div>
-
-      <div class="research-card">
-        <h3>Secure Blockchain Voting System</h3>
-        <p>Explored tamper-proof voting systems using Ethereum smart contracts.</p>
-        <p><strong>Technologies:</strong> Solidity, Ethereum, Smart Contracts</p>
-        <a href="#" target="_blank" class="btn">View Paper</a>
-      </div>
-
-      <!-- Add more cards as needed -->
-    </div>
-  </section>
+  <div class="publication-card">
+  <h3 class="pub-title">
+    A Survey of Deep Learning Object Detection Models for Business Intelligence Applications
+  </h3>
+  <p class="pub-authors">
+    Vinay Kumar, <strong>Sameeksha M</strong>, Nikhil T, Varun Kumar
+  </p>
+  <p class="pub-venue">
+    International Journal for Multidisciplinary Research (IJFMR)
+  </p>
+  <p class="pub-abstract">
+    The ever-rising applications of Business Intelligence techniques in the present world demands integration with other deep learning techniques such as Object Detection, Natural Language Processing, etc. With the inclusion of Object Detection, business intelligence can provide intelligible insights into make business experience better. With a comprehensive elucidation of training time complexities and the multiple factors that play a vital role in its variation, this paper aims to provide a report of object detection techniques. The single-stage and two-stage detectors are separately taken into consideration, while explaining the pertinence of its use cases.
+  </p>
+  <a href="#" class="pub-link" target="_blank">View Paper (IJFMR)</a>
 </div>
 
+
+</section>
+
+</div>
+
+<script src="style.js"></script>
 
     <!-- Projects Section -->
 <div id="projects-section" style="display:none;">
