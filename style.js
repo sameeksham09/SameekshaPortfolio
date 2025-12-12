@@ -27,7 +27,20 @@ var typed = new Typed(".typed-roles", {
 function showHome() {
     hideAllSections();
     document.getElementById("home-section").style.display = "block";
-    window.scrollTo(0,0);
+
+    // Hide the button when leaving research
+    document.getElementById("research-back-btn").style.display = "none";
+
+    window.scrollTo(0, 0);
+}
+function showResearch() {
+    hideAllSections();
+    document.getElementById("research-section").style.display = "block";
+
+    // Show the button ONLY here
+    document.getElementById("research-back-btn").style.display = "block";
+
+    window.scrollTo(0, 0);
 }
 
 function showAbout() {
