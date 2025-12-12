@@ -24,22 +24,17 @@ var typed = new Typed(".typed-roles", {
 //     document.getElementById("experience-section").style.display = "none";
 // }
 
-function showHome() {
-    hideAllSections();
-    document.getElementById("home-section").style.display = "block";
-
-    // Hide the button when leaving research
-    document.getElementById("research-back-btn").style.display = "none";
-
-    window.scrollTo(0, 0);
-}
 function showResearch() {
     hideAllSections();
     document.getElementById("research-section").style.display = "block";
+    document.querySelector(".research-back").style.display = "block"; // show button
+    window.scrollTo(0, 0);
+}
 
-    // Show the button ONLY here
-    document.getElementById("research-back-btn").style.display = "block";
-
+function showHome() {
+    hideAllSections();
+    document.getElementById("home-section").style.display = "block";
+    document.querySelector(".research-back").style.display = "none"; // hide button
     window.scrollTo(0, 0);
 }
 

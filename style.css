@@ -881,9 +881,20 @@ html {
   background-color: #5b21b6;
 }
 
-#research-back-btn {
-    display: none;
+/* .research-back {
+    display: none; /* hidden by default, JS will toggle display */
+/* } */ */
+
+#research-section .research-back {
+    display: none !important;
 }
+
+#research-section .btn.back-home {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 
 
 .exp-header {
